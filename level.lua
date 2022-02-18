@@ -297,10 +297,6 @@ local function _4_5_boom()
 			return
 		end
 
-		if entity.HitTagNumber ~= 1 then
-			return
-		end
-
 		entity.Speed = 0
 		entity.Color = {0, 1.0, 0, 1.0}
 		entity:SetDirection(math.rad(math.random(-180, 180)))
