@@ -69,7 +69,7 @@ local function _1(self, variables, dt)
 end
 
 local function _2bulbev_3(self, dt)
-	self.YVel = self.YVel + (dt * 0.135)
+	self.YVel = self.YVel + (dt * 1.35)
 end
 
 local function _2setup(variables, boss)
@@ -107,7 +107,7 @@ local function _2setup(variables, boss)
 		function()
 			local cx, cy = boss:GetCenter()
 
-			for i = 1, math.random(1, 3) do
+			for i = 1, math.random(1, 4) do
 				local ang = math.rad(math.random(-180, 0))
 				local bullet = game.Spawn(Bullet.new, cx, cy, 15, math.random(600, 700))
 				bullet.Color = {0.3, math.random(0.5, 1), 0.3}
@@ -495,7 +495,7 @@ end
 -- not actually 7th state, but explosion
 -- local _7, _7setup
 
-local start_index = 2 -- if you are wondering why this exists, because scrolling in vim and memorizing line numbers is such a pain
+local start_index = 1 -- if you are wondering why this exists, because scrolling in vim and memorizing line numbers is such a pain
 
 local attacks = {
 	{1, _1setup, _1};
